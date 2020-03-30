@@ -50,7 +50,8 @@ def loadKeys(username = ""):
 
 	for k in file:
 		if(k not in keys):
-			keys.append(k)
+			if(len(k)>5):
+				keys.append(k)
 	file.close()
 	return keys
 
